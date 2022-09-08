@@ -11,7 +11,7 @@
 
 ### ALGOS - EST TIME: < 1hr
 
-- Work through the [Recusion GA Module](https://my.generalassemb.ly/activities/773)
+- Work through the [Recursion GA Module](https://my.generalassemb.ly/activities/773)
 
 ### Read/Watch The Following - EST TIME: < 1hr
 
