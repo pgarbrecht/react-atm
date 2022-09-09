@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './ga.png';
-import Account from './Account';
+import Account from './Account/Account.js';
 
 //this is the middle level of the application, child to index.js
 class App extends Component {
