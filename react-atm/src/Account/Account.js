@@ -35,7 +35,7 @@ class Account extends Component { //class allows us to make an account sub-compo
       <div className="account"> 
         <h2> {this.props.name} </h2>
         <div className={this.state.balance > 0 ? "balance" : "balance zero"}> {this.state.balance} </div>
-        <input type="text" placeholder="enter an amount" onChange={this.setMoneyInput} /> 
+        <input type="number" placeholder="enter an amount" onChange={this.setMoneyInput} /> 
         <input type="button" value="Deposit" onClick={this.depositMoney} />
         <input type="button" value="Withdraw" onClick={this.withdrawMoney} />
       </div>
