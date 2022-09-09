@@ -19,6 +19,16 @@ class Account extends Component { //class allows us to make an account sub-compo
       balance: this.state.balance + Number(this.state.moneyInput) //update the balance property to be current balance + deposited money
     })
   }
+  withdrawMoney = () => { //function to withdraw money (i.e subtract moneyInput from balance)
+    if( this.state.balance - Number(this.state.moneyInput) >= 0) { //logic to check that user isn't trying to withdraw more money than what's in the account
+    this.setState({ //setState allows us to change a property in the account component
+      balance: this.state.balance - Number(this.state.moneyInput) //update the balance property to be current balance + deposited money
+    })
+    }
+    else if(this.state.balance - Number(this.state.moneyInput) < 0) {
+      alert("Error! You can't withdraw more money than you have in your account.");
+    }
+  }
   render() { 
     return ( //adds the account component onto the page with appropriate text, inputs, and calls the functions we need to run on change / click
       <div className="account"> 
@@ -26,7 +36,7 @@ class Account extends Component { //class allows us to make an account sub-compo
         <div className="balance"> {this.state.balance} </div>
         <input type="text" placeholder="enter an amount" onChange={this.setMoneyInput} /> 
         <input type="button" value="Deposit" onClick={this.depositMoney} />
-        <input type="button" value="Withdraw" />
+        <input type="button" value="Withdraw" onClick={this.withdrawMoney} />
       </div>
     )
   }
